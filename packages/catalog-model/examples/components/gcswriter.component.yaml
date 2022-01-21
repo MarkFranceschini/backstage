@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: asset-test
+  name: test-asset-test
   description: asset is a really cool Mux service
   tags: ["styri","gce-us-east1-production","gce-us-east4-production","gce-us-west1-staging","go"]
   annotations:
