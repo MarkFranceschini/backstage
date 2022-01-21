@@ -1,16 +1,27 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: logpuller
-  description: logpuller is a really cool Mux service
-  tags: ["styri"]
+  name: asset
+  description: asset is a really cool Mux service
+  tags: ["styri","gce-us-east1-production","gce-us-east4-production","gce-us-west1-staging","go"]
   annotations:
   links:
-    - url: https://github.com/muxinc/mux/tree/master/video/internal/servers/logpuller/
+    - url: https://github.com/muxinc/mux/tree/master/video/internal/servers/asset/
       title: Code
       icon: code
-
+    - url: https://grafana.gce-us-east1.production.mux.io/d/PpMTKyqWz/deployment?orgId=1&var-deployment_namespace=gce-us-east1-production&var-deployment_name=assetindex
+      title: Grafana-gce-us-east1-production
+      icon: grafana
+    - url: https://grafana.gce-us-east4.production.mux.io/d/PpMTKyqWz/deployment?orgId=1&var-deployment_namespace=gce-us-east4-production&var-deployment_name=assetindex
+      title: Grafana-gce-us-east4-production
+      icon: grafana
+    - url: https://grafana.gce-us-west1.staging.mux.io/d/PpMTKyqWz/deployment?orgId=1&var-deployment_namespace=gce-us-west1-staging&var-deployment_name=assetindex
+      title: Grafana-gce-us-west1-staging
+      icon: grafana
+    - url: https://bookstack.mux.io/books/mux-video-asset-index/page/assetindex-runbook
+      title: Runbook
+      icon: code
 spec:
   type: service
-  lifecycle: unknown
+  lifecycle: production
   owner: video
