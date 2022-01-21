@@ -1,21 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ch-cdnvideologwriter-test
-  description: ch-cdnvideologwriter is a really cool Mux service
-  tags: [ "styri","east1-production","west1-staging" ]
+  name: logpuller
+  description: logpuller is a really cool Mux service
+  tags: ["styri"]
   annotations:
   links:
-    - url: https://github.com/muxinc/mux/tree/master/video/internal/servers/ch-cdnvideologwriter/
+    - url: https://github.com/muxinc/mux/tree/master/video/internal/servers/logpuller/
       title: Code
       icon: code
-    - url: https://grafana.gce-us-east1.production.mux.io/d/PpMTKyqWz/deployment?orgId=1&var-deployment_namespace=gce-us-east1-production&var-deployment_name=ch-cdnvideologwriter
-      title: Grafana-east1
-      icon: grafana
-    - url: https://grafana.gce-us-west1.staging.mux.io/d/PpMTKyqWz/deployment?orgId=1&var-deployment_namespace=gce-us-west1-staging&var-deployment_name=ch-cdnvideologwriter
-      title: Grafana-west1
-      icon: grafana
+
 spec:
   type: service
-  lifecycle: production
+  lifecycle: unknown
   owner: video
